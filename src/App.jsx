@@ -1,17 +1,15 @@
-import './App.css';
-import Home from './Views/Home';
-import Header from './Components/Header';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css'
+import './Views/Home'
+import './Components/Header'
+import { BrowserRouter, Route, Routes } from 'react - router - dom';
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <Header/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" exact={true} element={<Home />}/>
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
-
-export default App;
