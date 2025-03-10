@@ -1,17 +1,372 @@
-*{
-  margin:0px;padding: 0px; box-sizing:border-box
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-.bg-blue{
+body {
+  align-items: start;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+.bg-blue {
   background-color: #233a95;
 }
-body{
-  font-family: 'Lato', sans-serif;font-size: 14px;
-}
-.headerRow .topRow{
+.headerWrapper .top-strip {
   padding: 8px 0px;
 }
-.headerRow .topRow p{
+.container {
+  max-width: 90%;
+}
+.headerWrapper .top-strip p {
   color: #fff;
   font-size: 12px;
+  font-weight: 400;
+}
+
+/* Day2 work */
+.countryDrop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 150px;
+  min-width: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-align: left !important;
+  font-size: 14px;
+  color: #000;
+}
+
+.countryDrop .name {
+  font-size: 12px;
+  text-transform: capitalize;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 700;
+}
+
+.logoImage img {
+  width: 100%;
+}
+
+.countryDrop .label {
+  font-size: 12px;
+  text-transform: capitalize;
+  line-height: 15px !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.countryDrop .info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Day 3 search box */
+
+.hSearch {
+  width: 60%;
+  height: 60px;
+  background: #f3f4f5;
+  padding: 10px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.hSearch input {
+  background: transparent;
+  outline: none !important;
+  color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 40px;
+  border: 0px;
+  padding: 0px 20px !important;
+}
+
+.hSearch button {
+  position: absolute !important;
+  top: 10px;
+  right: 15px;
+  z-index: 100;
+  min-width: 40px;
+  height: 40px;
+  width: 100px;
+  border-radius: 50%;
+  color: #000;
+}
+
+.hSearch button svg {
+  font-size: 30px;
+}
+/*Day 4  */
+.header {
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;
+}
+
+header .headerSearch button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 100;
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 100px !important;
+  border-radius: 50% !important;
+}
+
+header .part-3 .circle {
+  align-items: center;
+  justify-content: center;
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 50% !important;
+  border: 1px solid #f4f0f0;
+  color: #000;
+}
+
+header .part-3 .circle svg {
+  font-size: 20px;
+}
+
+.brand-description {
+  font-size: 13px;
+  color: #3e445a;
+  opacity: 0.5;
+}
+
+.cart .price {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+}
+.cart button {
+  background: #fff1ee;
+}
+
+.cart button svg {
+  color: #ea2b0f;
+}
+.cart .count {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  background: #ea2b0f;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  height: 20px;
+  width: 20px;
+}
+.angle
+{
+  color: #000;
+}
+/* Day-4 CSS for All cat Button */
+
+nav .allCartTab {
+  color: white;
+  background: #2bbef9;
+  padding: 10px 15px;
+  border-radius: 20px !important;
+}
+
+nav .allCartTab:hover {
+  background: #2bbefa;
+}
+
+nav .allCartTab .text {
   font-weight: 500;
+}
+
+nav .allCartTab .icon1 {
+  font-size: 20xp !important;
+}
+
+nav .allCartTab .icon1 {
+  font-size: 15px !important;
+}
+
+/* Day-5 */
+.catwrapper {
+  position: relative;
+}
+
+.catwrapper .sidebarnav {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* width: 60%!important; */
+  height: auto !important;
+  opacity: 0;
+  background: #fff;
+  position: absolute;
+  top: 168% !important;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  z-index: 100;
+}
+.catwrapper .sidebarnav ul {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.catwrapper .sidebarnav ul li {
+  list-style: none !important;
+  position: static;
+}
+
+.catwrapper .sidebarnav ul li button {
+  width: 100% !important;
+}
+.catwrapper .sidebarnav ul li button svg {
+  font-size: 15px !important;
+  opacity: 0.5;
+  margin-right: 10px !important;
+  color: #3e445a;
+}
+.catwrapper .sidebarnav ul li button a {
+  display: flex !important;
+  align-items: center;
+  width: 100% !important;
+  text-decoration: none !important;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6) !important;
+  text-transform: capitalize !important;
+}
+
+.catwrapper .sidebarnav.open {
+  height: auto;
+  opacity: 1;
+  visibility: inherit;
+}
+
+.catwrapper .sidebarnav ul li button:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.catwrapper .sidebarnav ul li .submenu {
+  position: absolute !important;
+  top: 0px;
+  left: 190px !important;
+  background: #fff;
+  width: 150px !important;
+  height: auto;
+  z-index: 100 !important;
+  visibility: hidden !important;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.catwrapper .sidebarnav ul li:hover .submenu {
+  z-index: 100 !important;
+  visibility: inherit !important;
+  opacity: 1;
+}
+
+/* day6 */
+
+nav .navpart2 ul li a{
+  font-size: 15px!important;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+ text-decoration: none;
+ color: rgba(0, 0, 0, 0.7);
+ padding: 8px 10px;
+ border-radius: 25px;
+ transition: all 0.2s ease-in-out;
+ }
+ nav .navpart2 ul li{
+    position:relative;
+    padding-bottom: 20px;}
+
+nav .navpart2 ul li .submenu{
+position:absolute;
+top: 128% !important;;
+left:0px;
+min-width:200px;
+background:#fff;
+opacity:0;
+visibility:hidden !important;
+transition:all 0.2s ease-in-out;
+z-index: 100;
+}
+
+nav .navpart2 ul li .submenu a
+{
+display:block;
+width:100%;
+justify-content:flex-start!important;
+border-radius:0px!important;
+text-transform:capitalize !important;
+font-weight:500;
+
+}
+
+
+
+nav .navpart2 ul li .submenu a:hover
+{
+background:#f1f1f1!important;
+}
+
+nav .navpart2 ul li:hover .submenu 
+{
+opacity:1;
+visibility:inherit !important;
+top:130%;
+}
+
+/* DAY 6 UPDATED CODE */
+
+
+nav .navpart2 ul li .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+
+nav .navpart2 ul li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  top: 110%;
+}
+
+
+nav .navpart2 ul li .submenu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+  transition: background 0.2s ease-in-out;
+}
+
+
+nav .navpart2 ul li .submenu a:hover {
+  background: #f1f1f1;
+}
+
+
+nav .navpart2 ul li {
+  position: relative;
+  list-style: none;
+  padding: 10px 15px;
+  cursor: pointer;
 }

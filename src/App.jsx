@@ -1,15 +1,20 @@
-import './App.css'
-import './Views/Home'
-import './Components/Header'
-import { BrowserRouter, Route, Routes } from 'react - router - dom';
+import React from 'react';
+import './App.css';
+import Home from './pages/Home/index';
+import Header from './Components/Header/index';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Header/>
-      <Routes>
-        <Route path="/" exact={true} element={<Home />}/>
-      </Routes>
-    </BrowserRouter>
-  )
+    <div className='app-container mx-auto'>
+      <Router>
+        <Header />
+        <Routes>
+      
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </div>
+  );
 }
